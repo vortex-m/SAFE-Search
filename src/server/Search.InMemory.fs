@@ -5,7 +5,7 @@ open Giraffe.Tasks
 open System.Text.RegularExpressions
 
 let private data = lazy ("properties.json" |> System.IO.File.ReadAllText |> FableJson.ofJson)
-
+ 
 let findByPostcode (request:FindNearestRequest) = task {
     return    
         { Results = [||]
